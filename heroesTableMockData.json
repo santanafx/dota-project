@@ -1,13 +1,40 @@
 {
     "heroes": [
-        { "id": 1, "name": "Anti-mage" },
-        { "id": 2, "name": "Alchemist" },
-        { "id": 3, "name": "Dazzle" },
-        { "id": 4, "name": "Axe" }
-    ],
-    "atribute": ["AGI", "STR", "INT", "AGI"],
-    "winrate": [50, 48, 60, 55],
-    "pickrate": [80, 30, 35, 60],
-    "xpm": [800, 600, 550, 690],
-    "gpm": [600, 500, 850, 600]
+        {
+            "id": 1,
+            "name": "Anti-mage",
+            "atribute": "AGI",
+            "winrate": 50,
+            "pickrate": 80,
+            "xpm": 800,
+            "gpm": 600
+        },
+        {
+            "id": 2,
+            "name": "Alchemist",
+            "atribute": "STR",
+            "winrate": 48,
+            "pickrate": 30,
+            "xpm": 600,
+            "gpm": 500
+        },
+        {
+            "id": 3,
+            "name": "Dazzle",
+            "atribute": "INT",
+            "winrate": 60,
+            "pickrate": 35,
+            "xpm": 550,
+            "gpm": 850
+        },
+        {
+            "id": 4,
+            "name": "Axe",
+            "atribute": "STR",
+            "winrate": 55,
+            "pickrate": 60,
+            "xpm": 690,
+            "gpm": 600
+        }
+    ]
 }

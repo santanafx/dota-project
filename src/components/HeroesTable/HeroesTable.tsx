@@ -1,10 +1,14 @@
 import { useEffect } from "react";
 import styles from "./HeroesTable.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchTable } from "./heroesTableSlice";
 
 export default function HeroesTable() {
     const dispatch = useDispatch();
+    const heroesTable = useSelector((store) => store.heroesTable.data.heroes);
+
+    console.log(heroesTable);
+    // console.log(heroesTable.heroes.length);
 
     useEffect(() => {
         dispatch(fetchTable());
@@ -24,32 +28,20 @@ export default function HeroesTable() {
                             <th>GPM</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Antimage</td>
-                            <td>AGI</td>
-                            <td>50%</td>
-                            <td>43%</td>
-                            <td>750</td>
-                            <td>821</td>
-                        </tr>
-                        <tr>
-                            <td>Axe</td>
-                            <td>STR</td>
-                            <td>48%</td>
-                            <td>43%</td>
-                            <td>500</td>
-                            <td>780</td>
-                        </tr>
-                        <tr>
-                            <td>Dazzle</td>
-                            <td>INT</td>
-                            <td>50%</td>
-                            <td>43%</td>
-                            <td>750</td>
-                            <td>821</td>
-                        </tr>
-                    </tbody>
+                    {heroesTable
+                        ? heroesTable.map((e) => (
+                              <tbody key={e.name}>
+                                  <tr>
+                                      <td>{e.name}</td>
+                                      <td>{e.atribute}</td>
+                                      <td>{e.winrate}</td>
+                                      <td>{e.pickrate}</td>
+                                      <td>{e.xpm}</td>
+                                      <td>{e.gpm}</td>
+                                  </tr>
+                              </tbody>
+                          ))
+                        : ""}
                 </table>
             </div>
         </div>

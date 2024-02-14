@@ -1,10 +1,4 @@
 const initialStateHeroesTable = {
-    hero: [],
-    atribute: [],
-    winrate: [],
-    pickrate: [],
-    xpm: [],
-    gpm: [],
     data: [],
 };
 
