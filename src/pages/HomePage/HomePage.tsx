@@ -7,10 +7,10 @@ export default function HomePage() {
     return (
         <div className={styles.homePage}>
             <HomePageNavBar />
-            <div className={styles.homePage__HomePageSideBar}>
+            <div className={styles.homePage__homePageSideBar}>
                 <HomePageSideBar />
             </div>
-            <div className={styles.homePage__HeroesTable}>
+            <div className={styles.homePage__heroesTable}>
                 <HeroesTable />
             </div>
         </div>

@@ -1,0 +1,13 @@
+{
+    "heroes": [
+        { "id": 1, "name": "Anti-mage" },
+        { "id": 2, "name": "Alchemist" },
+        { "id": 3, "name": "Dazzle" },
+        { "id": 4, "name": "Axe" }
+    ],
+    "atribute": ["AGI", "STR", "INT", "AGI"],
+    "winrate": [50, 48, 60, 55],
+    "pickrate": [80, 30, 35, 60],
+    "xpm": [800, 600, 550, 690],
+    "gpm": [600, 500, 850, 600]
+}

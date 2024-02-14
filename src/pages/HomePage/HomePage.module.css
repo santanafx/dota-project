@@ -2,12 +2,14 @@
     position: relative;
 }
 
-.homePage__HomePageSideBar {
+.homePage__homePageSideBar {
     position: absolute;
     top: 160px;
     left: 10px;
 }
 
-.homePage__HeroesTable {
+.homePage__heroesTable {
     position: absolute;
+    top: 160px;
+    left: 300px;
 }
