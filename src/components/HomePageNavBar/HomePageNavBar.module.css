@@ -1,0 +1,22 @@
+.homePageNavbar {
+    position: relative;
+}
+
+.homePageNavbar__nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--first-color);
+    height: 150px;
+}
+
+.homePageNavbar__img {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 100px;
+}
+
+.homePageNavbar__search {
+    width: 300px;
+}

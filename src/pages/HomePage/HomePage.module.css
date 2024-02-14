@@ -1,0 +1,13 @@
+.homePage {
+    position: relative;
+}
+
+.homePage__HomePageSideBar {
+    position: absolute;
+    top: 160px;
+    left: 10px;
+}
+
+.homePage__HeroesTable {
+    position: absolute;
+}

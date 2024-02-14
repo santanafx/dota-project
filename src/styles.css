@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+:root {
+    --first-color: #0f141a;
+    --second-color: #fdf9ee;
+    /* --third-color: #333333;
+    --forth-color: #f9f9f9;
+    --fith-color: #ace4e3;
+    --sixth-color: #737373;
+    --seventh-color: #cc3366; */
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.input {
+    border-radius: 5px;
+    height: 35px;
+    border-color: var(--second-color);
+    border-width: 5px;
+    border-style: none;
+    padding: 5px;
+    outline: 2px solid transparent;
+    box-shadow: 0 0 10px 5px rgba(253, 249, 238, 0.5);
+}
