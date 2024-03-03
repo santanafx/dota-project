@@ -1,7 +1,7 @@
-import styles from "./HomePageSideBar.module.css";
+import styles from './HomePageSideBar.module.css';
 
 export default function HomePageSideBar() {
-    return (
+  return (
         <div className={styles.homePageSideBar}>
             <nav className={styles.homePageSideBar__nav}>
                 <li
@@ -14,5 +14,5 @@ export default function HomePageSideBar() {
                 <li className={styles.homePageSideBar__item}>Replays</li>
             </nav>
         </div>
-    );
+  );
 }
