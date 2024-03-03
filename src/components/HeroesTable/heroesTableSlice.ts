@@ -37,7 +37,7 @@ export default function heroesTableReducer(
   }
 }
 
-export const fetchTable = () => async (dispatch: Dispatch<any>) => {
+export const fetchTable = () => async (dispatch: Dispatch<any>): Promise<void> => {
   //   dispatch(fetchTableRequest()); // Dispatch action to indicate data fetching started
   try {
     const res = await fetch('../../../heroesTableMockData.json');

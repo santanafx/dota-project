@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './HeroesTable.module.css';
-import { fetchTable } from './heroesTableSlice.ts';
 import { RootReducer } from '../../store/store.ts';
+import { fetchTable } from './heroesTableSlice.ts';
 
 export default function HeroesTable() {
   const dispatch = useDispatch();
