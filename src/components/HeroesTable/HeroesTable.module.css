@@ -1,17 +1,17 @@
 .heroesTable {
-    position: relative;
-    width: 1000px;
-    min-height: 700px;
+  position: relative;
+  width: 1000px;
+  min-height: 700px;
 }
 
 .heroesTable__tableContainer {
-    width: 1000px;
-    min-height: 700px;
-    background-color: var(--first-color);
-    color: var(--second-color);
-    border-radius: 10px;
-    padding: 50px;
+  width: 1000px;
+  min-height: 700px;
+  background-color: var(--first-color);
+  color: var(--second-color);
+  border-radius: 10px;
+  padding: 50px;
+  margin: 10px;
 }
 
-.heroesTable__table {
-}
+.heroesTable__table {}
