@@ -4,6 +4,7 @@ import heroesTableReducer from '../components/HeroesTable/heroesTableSlice.ts';
 
 export const store = configureStore({
   reducer: {
+    // @ts-expect-error error type generated because of redux toolkit
     heroesTable: heroesTableReducer,
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),

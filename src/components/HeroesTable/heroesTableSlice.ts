@@ -1,4 +1,3 @@
-import { PayloadAction } from '@reduxjs/toolkit';
 import { Dispatch } from 'redux';
 
 interface Heroes {
@@ -15,13 +14,24 @@ interface initialStateHeroesTableState {
   data: Heroes[];
 }
 
+interface FetchTableAction {
+  type: 'heroesTable/fetchTable';
+  payload: Heroes[];
+}
+
+interface UpdateHeroesAction {
+  type: 'heroesTable/updateHeroes';
+}
+
+type Action = FetchTableAction | UpdateHeroesAction;
+
 const initialState: initialStateHeroesTableState = {
   data: [],
 };
 
 export default function heroesTableReducer(
-  state: initialStateHeroesTableState = initialState,
-  action: PayloadAction<any>,
+  state = initialState,
+  action: Action,
 ) {
   switch (action.type) {
     case 'heroesTable/fetchTable':
@@ -37,7 +47,7 @@ export default function heroesTableReducer(
   }
 }
 
-export const fetchTable = () => async (dispatch: Dispatch<any>): Promise<void> => {
+export const fetchTable = () => async (dispatch: Dispatch<Action>): Promise<void> => {
   //   dispatch(fetchTableRequest()); // Dispatch action to indicate data fetching started
   try {
     const res = await fetch('../../../heroesTableMockData.json');

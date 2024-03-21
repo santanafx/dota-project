@@ -2,7 +2,6 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
-    'airbnb-base',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
   ],
