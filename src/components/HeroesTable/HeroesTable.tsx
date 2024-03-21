@@ -12,6 +12,7 @@ export default function HeroesTable() {
 
   // console.log(heroesTable);
   // console.log(heroesTable.heroes.length);
+  // console.log(heroesTable.heroes.length);
 
   useEffect(() => {
     dispatch(fetchTable());

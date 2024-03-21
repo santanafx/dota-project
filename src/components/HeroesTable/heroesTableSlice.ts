@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux';
 
-interface Heroes {
+type Heroes = {
   id: 1;
   name: string;
   atribute: string;
@@ -10,7 +10,7 @@ interface Heroes {
   gpm: number;
 }
 
-interface initialStateHeroesTableState {
+type initialStateHeroesTableState = {
   data: Heroes[];
 }
 
@@ -45,7 +45,7 @@ export default function heroesTableReducer(
     default:
       return state;
   }
-}
+};
 
 export const fetchTable = () => async (dispatch: Dispatch<Action>): Promise<void> => {
   //   dispatch(fetchTableRequest()); // Dispatch action to indicate data fetching started
@@ -56,10 +56,12 @@ export const fetchTable = () => async (dispatch: Dispatch<Action>): Promise<void
     dispatch({ type: 'heroesTable/fetchTable', payload: data });
   } catch (error) {
     // dispatch(fetchTableFailure(error)); // Dispatch action if fetching data fails
-    console.log(error);
+    if (error instanceof Error) {
+      console.log(error);
+    }
   }
 };
-
+/// /
 // const getPokemon = async (id: number): Promise<void> => {
 //     const data: Response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
 //     const pokemon: any = await data.json()
