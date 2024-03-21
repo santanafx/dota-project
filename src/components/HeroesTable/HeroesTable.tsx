@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootReducer } from '../../store/store.ts';
 import styles from './HeroesTable.module.css';
-import { fetchTable } from './heroesTableSlice.ts';
+import { Heroes, fetchTable } from './heroesTableSlice.ts';
 
 export default function HeroesTable() {
   const dispatch = useDispatch();
   const heroesTable = useSelector(
-    (store: RootReducer) => store.heroesTable.data.heroes,
+    (store: RootReducer) => store.heroesTable.data.heroes
   );
 
   // console.log(heroesTable);
@@ -33,18 +33,21 @@ export default function HeroesTable() {
             </tr>
           </thead>
           {heroesTable
-            ? heroesTable.map((e) => (
-              <tbody key={e.name}>
-                <tr>
-                  <td>{e.name}</td>
-                  <td>{e.atribute}</td>
-                  <td>{e.winrate}</td>
-                  <td>{e.pickrate}</td>
-                  <td>{e.xpm}</td>
-                  <td>{e.gpm}</td>
-                </tr>
-              </tbody>
-            ))
+            ? heroesTable.map((e: Heroes) => {
+              // debugger
+              return (
+                <tbody key={e.name}>
+                  <tr>
+                    <td>{e.name}</td>
+                    <td>{e.atribute}</td>
+                    <td>{e.winrate}</td>
+                    <td>{e.pickrate}</td>
+                    <td>{e.xpm}</td>
+                    <td>{e.gpm}</td>
+                  </tr>
+                </tbody>
+              )
+            })
             : ''}
         </table>
       </div>

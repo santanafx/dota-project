@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux';
 
-type Heroes = {
+export type Heroes = {
   id: 1;
   name: string;
   atribute: string;
